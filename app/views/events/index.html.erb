@@ -1,0 +1,15 @@
+<% @events.each do |e|  %>
+	<div class="card" style="width: 18rem; display: flex;" >
+	  <div class="card-body">
+	    <div class="card-text" style="font-weight: bold; font-size: 2em;"><%= e.title%></div>
+	    </br>
+	    <div class="card-text"><%= e.description%></div>
+	    <div class="card-text"><p>Start :  <%= e.start_date%></div>
+	    <div class="card-text"><p>Duration :  <%= e.duration%>min</p></div>
+	    <div class="card-text"><p>Location :  <%= e.location%></p></div>
+	    <div class="card-text"><p>Price :  <%= e.price%>€</p></div>
+	    <div class="card-text"><p>Event host & create by :  </p><%= e.administrator.email%></div>
+	  </div>
+	</div>
+	</br>
+<%end%>

@@ -1,0 +1,49 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 offset-md-3">
+			<br><br><br>
+
+			<div class="text-center">
+				<h1 class="h3 mb-3 font-weight-normal text-center"> Create an event</h1>
+			</div>
+			<%= form_tag events_path(action: "create"), method: "post" do %>
+			      <div class="form-group">
+			<%= label_tag "Title:" %> </br>
+			<%= text_field_tag "title", @title, class: "form-control"   %>
+			</div>
+			<br />
+			
+			      <div class="form-group">
+			<%= label_tag "Description" %> </br>
+			<%= text_area_tag "description", @description, class: "form-control"   %>
+			</div>
+			<br />
+			
+			      <div class="form-group">
+			<%= label_tag "Starting date" %> </br>
+			<%= text_area_tag "start_date", @start_date, class: "form-control"   %>
+			</div>
+			<br />
+			
+			      <div class="form-group">
+			<%= label_tag "Duration" %> </br>
+			<%= text_area_tag "duration", @duration, class: "form-control"   %>
+			</div>
+			<br />
+			
+			      <div class="form-group">
+			<%= label_tag "Location" %> </br>
+			<%= text_area_tag "location", @location, class: "form-control"   %>
+			</div>
+			<br />
+			
+			      <div class="form-group">
+			<%= label_tag "Price" %> </br>
+			<%= text_area_tag "price", @price, class: "form-control"   %>
+			</div>
+			<br />
+			
+			<%= submit_tag "Create the event" %>
+			<br /><br /><br />
+			
+			<% end %>
