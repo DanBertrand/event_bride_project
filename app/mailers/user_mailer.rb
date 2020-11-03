@@ -1,4 +1,6 @@
 class UserMailer < ApplicationMailer
+	include Devise::Mailers::Helpers
+	
 	default from: 'dannyTHP@yopmail.com'
 	 
 	  def welcome_email(user)

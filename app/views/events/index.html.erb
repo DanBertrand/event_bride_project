@@ -1,5 +1,7 @@
+<br>
+<div style="display: flex;justify-content: space-around;">
 <% @events.each do |e|  %>
-	<div class="card" style="width: 18rem; display: flex;" >
+	<div class="card" style="width: 18rem; flex-wrap: wrap; margin-left: 1em; margin-left: 1em" >
 	  <div class="card-body">
 	    <div class="card-text" style="font-weight: bold; font-size: 2em;"><%= e.title%></div>
 	    </br>
@@ -9,7 +11,10 @@
 	    <div class="card-text"><p>Location :  <%= e.location%></p></div>
 	    <div class="card-text"><p>Price :  <%= e.price%>€</p></div>
 	    <div class="card-text"><p>Event host & create by :  </p><%= e.administrator.email%></div>
+	    <%= link_to "See more", event_path(e.id), class: "btn btn-primary" %>
 	  </div>
 	</div>
 	</br>
 <%end%>
+</div>
+

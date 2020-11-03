@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   root 'events#index'
-  get 'static_pages/index'
-  get 'static_pages/secret'
+
+  resources :static_pages, only: [:index, :secret]
 
   devise_for :users do
     get '/users/sign_out' => 'devise/sessions#destroy'
