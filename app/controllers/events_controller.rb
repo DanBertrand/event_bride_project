@@ -1,6 +1,6 @@
-class EventsController < ApplicationController
+class EventsController < UsersController
 
-	before_action :authenticate_user!
+	before_action :authenticate_user!, except: :index
 
 	def index
 		@events = Event.all

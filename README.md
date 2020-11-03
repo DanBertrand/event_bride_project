@@ -41,5 +41,4 @@ Things you may want to cover:
 	 .'Send me reset password instruction' doesnt really work (only on the terminal)
 	 .Updating the profil is yet limited to email and password / Didnt have enough time
 	 .Seed only generate 10 Users
-	 .I put some 'before_action' (I didnt want someone without accout could create an event) but doesnt redirect
 	_________________________________________________________
